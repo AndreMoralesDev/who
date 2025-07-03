@@ -1,3 +1,4 @@
+import { AddToCartButton } from "@/components/pure/AddToCartButton";
 import { ProductPrice } from "@/components/pure/ProductPrice";
 import Image from "next/image";
 import Link from "next/link";
@@ -47,6 +48,8 @@ export const ProductItem = ({ product }: ProductItemProps) => {
                     size="sm"
                 />
             </div>
+
+            <AddToCartButton product={product} />
         </article>
     );
 };
