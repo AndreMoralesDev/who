@@ -24,8 +24,8 @@ const ProductDetailsPage = async ({ params }: ProductDetailsPageProps) => {
     }
 
     return (
-        <div className="p-4">
-            <main className="grid grid-cols-[40%_1fr] gap-4 md:gap-6 max-w-screen-xl mx-auto bg-white shadow-lg p-4 rounded-lg">
+        <div className="p-4 grow flex flex-col gap-6">
+            <main className="grid grid-cols-[40%_1fr] gap-4 md:gap-6 max-w-screen-xl mx-auto bg-white shadow-lg p-4 rounded-lg grow">
                 <div>
                     <figure>
                         <Image
