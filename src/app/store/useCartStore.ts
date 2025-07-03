@@ -25,7 +25,6 @@ export const useCartStore = create<CartStore>()(
                     ({ id }) => id === newProduct.id
                 );
                 if (productExist) {
-                    console.log("El producto ya fue agregado");
                     toast.error(`El producto ${title} ya existe en tu carrito`);
                     return;
                 }

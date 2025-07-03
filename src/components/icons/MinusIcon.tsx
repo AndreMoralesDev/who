@@ -1,0 +1,14 @@
+export const MinusIcon = ({ className = "" }) => {
+    return (
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            className={className}
+        >
+            <path
+                fill="currentColor"
+                d="M18 12.998H6a1 1 0 0 1 0-2h12a1 1 0 0 1 0 2"
+            ></path>
+        </svg>
+    );
+};
