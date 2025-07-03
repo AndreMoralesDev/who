@@ -32,7 +32,7 @@ export const ProductItem = ({ product }: ProductItemProps) => {
                 </figure>
             </Link>
 
-            <div>
+            <div className="grow">
                 <p className="uppercase text-[10px] font-bold gray-600">
                     {product.brand}
                 </p>

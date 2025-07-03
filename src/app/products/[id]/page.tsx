@@ -1,6 +1,8 @@
 import { getProduct } from "@/api/models/products/querys/getProduct/getProduct";
 import { getProductToProductDetailsSchema } from "@/api/models/products/querys/getProduct/getProductParsers";
+import { AddToCartButton } from "@/components/pure/AddToCartButton";
 import { ProductPrice } from "@/components/pure/ProductPrice";
+import { productDetailsSchemaToProductSchema } from "@/utils/productParser";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 
@@ -46,9 +48,7 @@ const ProductDetailsPage = async ({ params }: ProductDetailsPageProps) => {
                             {product.title}
                         </h1>
                     </div>
-
                     <span className="block w-full h-[1px] bg-gray-300" />
-
                     <div>
                         <ProductPrice
                             price={product.price}
@@ -57,8 +57,11 @@ const ProductDetailsPage = async ({ params }: ProductDetailsPageProps) => {
                         />
                     </div>
 
-                    <span className="block w-full h-[1px] bg-gray-300" />
+                    <AddToCartButton
+                        product={productDetailsSchemaToProductSchema(product)}
+                    />
 
+                    <span className="block w-full h-[1px] bg-gray-300" />
                     <div className="flex flex-col gap-2">
                         <h2 className="font-semibold text-base">
                             Description:
