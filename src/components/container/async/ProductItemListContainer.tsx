@@ -1,5 +1,5 @@
-import { getProducts } from "@/api/models/products/querys/getProducts";
-import { getProductsToProductSchema } from "@/api/models/products/querys/getProductsParsers";
+import { getProducts } from "@/api/models/products/querys/getProducts/getProducts";
+import { getProductsToProductSchema } from "@/api/models/products/querys/getProducts/getProductsParsers";
 import { ProductItemList } from "@/components/container/ProductItemList";
 
 type ProductItemListContainerProps = {

@@ -1,7 +1,7 @@
 import {
     GetProductsInput,
     GetProductsResponse,
-} from "@/api/models/products/querys/getProductsTypes";
+} from "@/api/models/products/querys/getProducts/getProductsTypes";
 import { API_PRODUCTS_URL } from "@/utils/constants";
 
 export const getProducts = async (
@@ -14,13 +14,6 @@ export const getProducts = async (
             `${API_PRODUCTS_URL}/products?limit=${limit}&skip=${skip}`
         );
 
-        if (!productsResponse.ok) {
-            console.error(
-                `${API_PRODUCTS_URL}/products?limit=${limit}&skip=${skip}`
-            );
-            throw new Error("Error al obtener los productos");
-        }
-
         const products = (await productsResponse.json())
             .products as GetProductsResponse["products"];
 
@@ -32,6 +25,7 @@ export const getProducts = async (
     } catch (error) {
         // Loggear el error
         console.error(error);
+
         return {
             error: true,
             status: 500,

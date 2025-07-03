@@ -1,4 +1,4 @@
-import { GetProductsResponse } from "@/api/models/products/querys/getProductsTypes";
+import { GetProductsResponse } from "@/api/models/products/querys/getProducts/getProductsTypes";
 
 export const getProductsToProductSchema = (response: GetProductsResponse) => {
     const products: ProductSchema[] = response.products.map((product) => ({

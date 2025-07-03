@@ -32,7 +32,7 @@ export const ProductItem = ({ product }: ProductItemProps) => {
             </Link>
 
             <div>
-                <p className="uppercase text-[10px] font-bold">
+                <p className="uppercase text-[10px] font-bold gray-600">
                     {product.brand}
                 </p>
                 <Link href={`/products/${product.id}`} className="line-clamp-2">
@@ -44,6 +44,7 @@ export const ProductItem = ({ product }: ProductItemProps) => {
                 <ProductPrice
                     price={product.price}
                     discountPercentage={product.discountPercentage}
+                    size="sm"
                 />
             </div>
         </article>

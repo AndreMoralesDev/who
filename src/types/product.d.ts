@@ -10,3 +10,7 @@ interface ProductSchema {
     thumbnail: string;
     images: string[];
 }
+
+interface ProductDetailsSchema extends ProductSchema {
+    description: string;
+}
