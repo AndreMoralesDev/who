@@ -34,6 +34,8 @@ const ProductDetailsPage = async ({ params }: ProductDetailsPageProps) => {
                             width={1000}
                             height={1000}
                             className="w-full h-full object-cover"
+                            priority={true}
+                            loading="eager"
                         />
                     </figure>
                 </div>

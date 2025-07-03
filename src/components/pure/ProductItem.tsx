@@ -17,6 +17,8 @@ export const ProductItem = ({ product }: ProductItemProps) => {
                         alt={product.title}
                         width={300}
                         height={300}
+                        priority={false}
+                        loading="lazy"
                         className="w-full h-full object-cover"
                     />
 
@@ -26,6 +28,8 @@ export const ProductItem = ({ product }: ProductItemProps) => {
                             alt={product.title}
                             width={300}
                             height={300}
+                            priority={false}
+                            loading="lazy"
                             className="absolute top-0 left-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 z-10 transition-opacity duration-300 bg-white"
                         />
                     )}
